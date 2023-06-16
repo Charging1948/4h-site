@@ -1,0 +1,4 @@
+[submodule "anwendungsprojekt-website"]
+	url = git@github.com:Charging1948/anwendungsprojekt-website.git
+[submodule "inf22-anwendungsprojekt-api"]
+	url = git@github.com:Charging1948/inf22-anwendungsprojekt-api.git

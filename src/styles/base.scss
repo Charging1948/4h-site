@@ -1,0 +1,15 @@
+html, body {
+    @apply min-h-screen transition-colors;
+}
+
+#page-wrapper {
+    @apply min-h-screen;
+}
+
+#theme-change {
+    @apply select select-primary w-3/4 mx-auto;
+}
+
+#the-footer {
+    @apply footer footer-center p-4 bg-base-300 text-base-content;
+}

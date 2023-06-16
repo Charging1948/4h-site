@@ -1,0 +1,32 @@
+.navlink-primary {
+  @apply btn btn-primary;
+}
+
+.navlink-neutral {
+  @apply btn btn-neutral;
+}
+
+.navmenu {
+    @apply p-4 w-full flex-col justify-center items-center;
+    @apply join join-horizontal;
+}
+
+.navmenu * {
+    @apply w-full;
+}
+
+.navlink > li > a.navlink {
+    @apply join-item;
+}
+
+.navmenu div.divider {
+    @apply max-xs:hidden;
+}
+
+.drawer-button {
+    @apply btn outline-neutral;
+}
+
+.drawer-button > img {
+    @apply w-8 h-8;
+}

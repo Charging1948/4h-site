@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <link rel="icon" type="image/ico" href="./favicon.ico" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title></title>
+  <link rel="stylesheet" href="./styles/tailwind.scss">
+  <link rel="stylesheet" href="./styles/base.scss">
+  <link rel="stylesheet" href="./styles/layout.scss">
+</head>
+
+<body>
+
+  <div class="drawer lg:drawer-open">
+    <input id="nav-drawer" type="checkbox" class="drawer-toggle" />
+    <div id="page-wrapper" class="drawer-content">
+
+      <header id="the-header" class="navbar bg-base-100 lg:hidden">
+        <div class="flex-none">
+          <div class="tooltip tooltip-bottom" data-tip="Sidebar öffnen">
+            <label tabindex="0" for="nav-drawer" class="btn btn-ghost btn-circle drawer-button">
+              <img src="assets/open.svg" alt="menu icon, for opening the sidebar"> 
+            </label>
+          </div>
+        </div>
+        <div class="flex-1 justify-center">
+          <h1 class="normal-case text-xl text-center px-2">Happy Health Helpers Hospital</h1>
+        </div>
+      </header>
+
+      <main id="main-content"></main>
+    </div>
+    <aside class="drawer-side">
+      <label for="nav-drawer" class="drawer-overlay"></label>
+      <div class="h-full flex flex-col justify-between items-center sm:w-80 w-40 bg-base-200 text-base-content">
+
+        <ul class="navmenu">
+          <!-- Sidebar content here -->
+          <li class="lg:hidden"><label for="nav-drawer" class="btn btn-ghost btn-circle drawer-button lg:hidden">
+              <img src="assets/close.svg" alt="menu icon, for closing the sidebar"> 
+          </label></li>
+          <li><a class="navlink" href="/">Homepage</a></li>
+          <!-- <li>
+            <div class="divider"></div>
+          </li> -->
+          <li><a class="navlink" href="/news">News</a></li>
+          <!-- <li>
+            <div class="divider"></div>
+          </li> -->
+          <li><a class="navlink" href="/services">Services</a></li>
+          <!-- <li>
+            <div class="divider"></div>
+          </li> -->
+          <li><a class="navlink" href="/team">Team</a></li>
+          <!-- <li>
+            <div class="divider"></div>
+          </li> -->
+          <li><a class="navlink" href="/contact">Contact us</a></li>
+        </ul>
+        <select class="m-3" name="theme-change" id="theme-change" data-choose-theme>
+          <option value="light">Light</option>
+          <option value="dark">Dark</option>
+          <option value="dracula">Dracula</option>
+          <option value="doctors">Doctors</option>
+        </select>
+      </div>
+    </aside>
+  </div>
+
+
+  <script>
+
+  </script>
+  <script type="module" src="./scripts/main.js"></script>
+</body>
+
+</html>
