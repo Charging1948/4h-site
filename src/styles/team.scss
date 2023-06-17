@@ -1,0 +1,21 @@
+#team {
+  @apply p-10;
+  .doctor-card {
+    @apply m-10 bg-primary text-primary-content;
+  }
+
+  .team-card {
+    @apply grid grid-rows-[auto,1fr] p-4;
+
+    h2 {
+      @apply w-full text-center text-2xl font-bold mb-4;
+    }
+
+    & > div.team-card-body {
+      @apply flex flex-wrap justify-center gap-4;
+      & > figure {
+        @apply w-full sm:w-1/2 md:w-1/3 xl:w-1/4;
+      }
+    }
+  }
+}
