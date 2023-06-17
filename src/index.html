@@ -34,35 +34,35 @@
     </div>
     <aside class="drawer-side">
       <label for="nav-drawer" class="drawer-overlay"></label>
-      <div class="h-full flex flex-col justify-between items-center sm:w-80 w-40 bg-base-200 text-base-content">
+      <div class="h-full flex flex-col justify-between items-center sm:w-80 w-40 bg-base-200 p-4 text-base-content">
 
-        <ul class="navmenu">
+        <div class="join join-vertical my-2">
           <!-- Sidebar content here -->
-          <li class="lg:hidden"><label for="nav-drawer" class="btn btn-ghost btn-circle drawer-button lg:hidden">
+          <label for="nav-drawer" class="btn btn-ghost btn-neutral drawer-button w-full max-md:join-item lg:hidden">
               <img src="assets/close.svg" alt="menu icon, for closing the sidebar"> 
-          </label></li>
-          <li><a class="navlink" href="/">Homepage</a></li>
-          <!-- <li>
+          </label>
+          <a class="navlink" href="/">Homepage</a>
+          <!-- 
             <div class="divider"></div>
-          </li> -->
-          <li><a class="navlink" href="/news">News</a></li>
-          <!-- <li>
+          -->
+          <a class="navlink" href="/news">News</a>
+          <!--
             <div class="divider"></div>
-          </li> -->
-          <li><a class="navlink" href="/services">Services</a></li>
-          <!-- <li>
+          -->
+          <a class="navlink" href="/services">Services</a>
+          <!--
             <div class="divider"></div>
-          </li> -->
-          <li><a class="navlink" href="/team">Team</a></li>
-          <!-- <li>
+          -->
+          <a class="navlink" href="/team">Team</a>
+          <!--
             <div class="divider"></div>
-          </li> -->
-          <li><a class="navlink" href="/contact">Contact us</a></li>
-        </ul>
+          -->
+          <a class="navlink" href="/contact">Contact us</a>
+        </div>
+
         <select class="m-3" name="theme-change" id="theme-change" data-choose-theme>
           <option value="light">Light</option>
           <option value="dark">Dark</option>
-          <option value="dracula">Dracula</option>
           <option value="doctors">Doctors</option>
         </select>
       </div>
