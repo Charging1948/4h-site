@@ -1,0 +1,11 @@
+import { getOpenInfo } from "../config/opening-hours"
+
+export async function setOpeningHours() {
+    const ohBody = document.querySelector("#opening-hours-body")
+    // const today = new Date();
+    // today.setDate(today.getDate() + 5);
+    // const openInfo = await getOpenInfo(today);
+    const openInfo = await getOpenInfo();
+
+    ohBody.innerHTML += `${openInfo.weekSchedule.toString()}`;
+}

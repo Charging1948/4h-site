@@ -13,3 +13,11 @@ html, body {
 #the-footer {
     @apply footer footer-center p-4 bg-base-300 text-base-content;
 }
+
+#the-header {
+    @apply navbar bg-base-100 lg:hidden;
+}
+
+#drawer-content {
+    @apply h-full flex flex-col justify-between items-center xs:w-80 w-screen bg-base-200 p-4 text-base-content;
+}
