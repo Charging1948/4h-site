@@ -84,7 +84,7 @@ const createWeekSchedule = (today, openingHours, isClosedToday) => {
         });
     }
     if (!isClosedToday) {
-        weekSchedule[0].classNames = "badge badge-success";
+        weekSchedule[0].classNames = "badge badge-success badge-lg";
         weekSchedule[0].isTodayAndOpen = true;
     }
     return weekSchedule;
