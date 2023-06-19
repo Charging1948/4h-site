@@ -14,7 +14,7 @@ function loadRoute(route) {
 
     fetch(route)
         .then(response => response.text())
-        .then(html => { console.log(html); return html })
+        .then(html => { return html })
         .then(html => {
             document.getElementById("main-content").innerHTML = html.match(/<body[^>]*>([\s\S]*)<\/body>/)[1];
 
@@ -23,7 +23,6 @@ function loadRoute(route) {
 
             // update the active nav link
             document.querySelectorAll(".navlink").forEach(link => {
-                console.log(link.href, window.location.origin + window.location.pathname)
                 link.classList.add("navlink-neutral");
                 link.classList.remove("navlink-primary");
                 if (link.href === window.location.origin + window.location.pathname) {
@@ -31,6 +30,9 @@ function loadRoute(route) {
                     link.classList.add("navlink-primary");
                 }
             });
+        })
+        .then(async () => {
+            await setOpeningHours();
         })
         .catch(error => {
             console.warn(error);
@@ -44,5 +46,3 @@ window.addEventListener("popstate", () => {
 
 // Load the initial route
 loadRoute(routes[window.location.pathname]);
-
-setOpeningHours();
