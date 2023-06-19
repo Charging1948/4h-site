@@ -51,12 +51,9 @@ const getDateString = (date) => {
     return date.toLocaleDateString('en-DE', { weekday: 'long' }).toLowerCase();
 }
 
-const getFormattedDateString = (date) => {
+const getFormattedDateString = (today, date) => {
     let result = date.toLocaleDateString('en-DE', { weekday: 'long' });
     // compare to today, if today, return "Today", if not today return result
-    const today = new Date();
-    //console log all comparisons
-    console.log(date.getDate(), today.getDate(), date.getMonth(), today.getMonth(), date.getFullYear(), today.getFullYear())
     if (date.getDate() === today.getDate() && date.getMonth() === today.getMonth() && date.getFullYear() === today.getFullYear())
         return "Today";
     else if (date.getDate() === today.getDate() + 1 && date.getMonth() === today.getMonth() && date.getFullYear() === today.getFullYear())
@@ -79,7 +76,7 @@ const createWeekSchedule = (today, openingHours, isClosedToday) => {
         console.log(curDayString)
         weekSchedule.push({
             day: curDayString,
-            formattedDay: getFormattedDateString(curDay),
+            formattedDay: getFormattedDateString(today, curDay),
             open: getTimeString(openingHours[curDayString].open),
             close: getTimeString(openingHours[curDayString].close),
             isTodayAndOpen: false, 
