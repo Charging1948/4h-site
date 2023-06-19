@@ -1,5 +1,6 @@
 import { themeChange } from 'theme-change'
 import routes from './routes.js'
+import { setOpeningHours } from './dom-manipulation.js';
 // import '../styles/tailwind.scss';
 // import '../styles/base.scss';
 // import '../styles/layout.scss';
@@ -43,3 +44,5 @@ window.addEventListener("popstate", () => {
 
 // Load the initial route
 loadRoute(routes[window.location.pathname]);
+
+setOpeningHours();

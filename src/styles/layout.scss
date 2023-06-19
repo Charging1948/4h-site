@@ -1,32 +1,36 @@
-.navlink-primary {
-  @apply btn btn-primary;
-}
-
-.navlink-neutral {
-  @apply btn btn-neutral;
-}
-
 .navmenu {
-    @apply p-4 w-full flex-col justify-center items-center;
-    @apply join join-horizontal;
-}
+  @apply join join-horizontal;
+  @apply w-full flex-col items-center justify-center p-4;
 
-.navmenu * {
+  & > * {
     @apply w-full;
-}
+  }
 
-a.navlink {
-    @apply join-item;
-}
-
-.navmenu div.divider {
+  div.divider {
     @apply max-xs:hidden;
+  }
+
+  .navlink {
+    @apply join-item;
+
+    &.navlink-primary {
+      @apply btn btn-primary;
+    }
+
+    &.navlink-neutral {
+      @apply btn btn-neutral;
+    }
+  }
 }
 
 .drawer-button {
-    @apply btn outline-neutral;
+  @apply btn btn-ghost btn-neutral w-10 p-1 max-md:join-item lg:hidden;
+
+  & > svg {
+    @apply h-8 w-8;
+  }
 }
 
-.drawer-button > img {
-    @apply w-8 h-8;
+.opening-hours {
+  @apply card w-full bg-neutral text-neutral-content;
 }
