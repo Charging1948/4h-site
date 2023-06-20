@@ -2,7 +2,6 @@ import { themeChange } from 'theme-change'
 import routes from './routes.js'
 import { setOpeningHours } from './dom-manipulation.js';
 
-themeChange();
 
 function loadRoute(route) {
 
@@ -21,7 +20,7 @@ function loadRoute(route) {
             mainContent.innerHTML = bodyMatch[4];
             mainContent.id = bodyMatch[3];
 
-            import(`../styles/${bodyMatch[3]}.scss`)
+            import(`../styles/pages/${bodyMatch[3]}.scss`)
 
 
             // update the page title
@@ -39,6 +38,11 @@ function loadRoute(route) {
                     link.classList.add("navlink-primary");
                 }
             });
+
+            // update the theme-toggle-state of the input
+            // if html has data-theme="dark" attribute then set the input to checked
+            const themeToggleInput = document.querySelector("#theme-toggle-input")
+            themeToggleInput.checked = document.querySelector("html[data-theme='light']") ? true : false;
         })
         .then(async () => {
             await setOpeningHours();
@@ -55,3 +59,6 @@ window.addEventListener("popstate", () => {
 
 // Load the initial route
 loadRoute(routes[window.location.pathname]);
+
+
+themeChange();

@@ -1,4 +1,4 @@
-// #news {
+#news {
 
     .news-grid {
         @apply grid grid-cols-1 gap-4 snap-y snap-mandatory;
@@ -13,8 +13,4 @@
             }
         }
     }
-    // .drop-img-shadow {
-    //     @apply z-10;
-    //       filter: drop-shadow(12px 12px 7px rgba(0,0,0,0.3));
-    // }
-// }
+}
