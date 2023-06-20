@@ -9,7 +9,7 @@
       @apply grid grid-cols-1 md:grid-cols-2 gap-4 xl:gap-10 2xl:gap-4;
 
       .service-card {
-        @apply card 2xl:card-side bg-base-100 shadow-xl;
+        @apply card 2xl:card-side bg-primary text-primary-content shadow-xl;
       }
     }
   }
