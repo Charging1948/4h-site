@@ -9,6 +9,9 @@ function loadRoute(route) {
     if (!route)
         route = routes["/404"];
 
+    let routeName = route.split("/").pop().split(".")[0];
+    routeName = routeName.charAt(0).toUpperCase() + routeName.slice(1);
+
     fetch(route)
         .then(response => response.text())
         .then(html => { return html })
@@ -17,6 +20,9 @@ function loadRoute(route) {
 
             // update the page title
             document.title = html.match(/<title>(.*?)<\/title>/)[1];
+
+            // update the page heading
+            document.querySelector("#the-page-heading").innerHTML += ` - ${routeName}`;
 
             // update the active nav link
             document.querySelectorAll(".navlink").forEach(link => {

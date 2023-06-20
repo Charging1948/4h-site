@@ -15,7 +15,10 @@ html, body {
 }
 
 #the-header {
-    @apply navbar bg-base-100 lg:hidden;
+    @apply navbar bg-base-100 shadow-md lg:shadow-lg mb-6 relative;
+    h1 {
+        @apply text-2xl font-bold;
+    }
 }
 
 #drawer-content {
