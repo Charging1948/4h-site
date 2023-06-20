@@ -1,0 +1,20 @@
+// #news {
+
+    .news-grid {
+        @apply grid grid-cols-1 gap-4 snap-y snap-mandatory;
+    }
+    .news-card {
+        @apply card lg:card-side bg-base-100 shadow-xl snap-start snap-always lg:snap-center m-8 lg:m-20;
+
+        & > figure {
+            // @apply mx-10 mt-10;
+            & > img {
+                // @apply rounded-xl aspect-square max-h-52;
+            }
+        }
+    }
+    // .drop-img-shadow {
+    //     @apply z-10;
+    //       filter: drop-shadow(12px 12px 7px rgba(0,0,0,0.3));
+    // }
+// }
