@@ -1,15 +1,20 @@
 #team {
   @apply p-10;
+
+  h2 {
+    @apply w-full text-center text-2xl font-bold mb-4;
+  }
+
   .doctor-card {
-    @apply m-10 bg-primary text-primary-content;
+    @apply card lg:card-side shadow-xl m-10 bg-primary text-primary-content;
+
+    h3 {
+      @apply w-full text-center text-xl font-bold;
+    }
   }
 
   .team-card {
     @apply grid grid-rows-[auto,1fr] p-4;
-
-    h2 {
-      @apply w-full text-center text-2xl font-bold mb-4;
-    }
 
     & > div.team-card-body {
       @apply flex flex-wrap justify-center gap-4;

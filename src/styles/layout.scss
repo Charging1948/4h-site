@@ -1,5 +1,5 @@
-#drawer-content {
-  
+#page-wrapper {
+  @apply grid grid-rows-[auto,1fr];
 }
 .navmenu {
   @apply join join-horizontal;
