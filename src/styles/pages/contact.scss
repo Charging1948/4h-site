@@ -1,6 +1,11 @@
 #contact {
+  background-image: url("/assets/luigi_piste.webp");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+
   .contactdiv {
-    @apply flex items-center h-full justify-center;
+    @apply flex items-center h-full justify-center hero-overlay bg-opacity-60;
 
     .contactcontent {
       @apply card w-5/6 sm:w-3/4 lg:w-1/2 shadow-xl bg-primary text-primary-content;
