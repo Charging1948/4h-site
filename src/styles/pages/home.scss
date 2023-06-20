@@ -1,0 +1,17 @@
+#home {
+  @apply flex content-center;
+  background-image: url('/assets/team/praxisteam.png');
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+
+  .calldiv {
+    @apply flex flex-col rounded-xl from-primary to-secondary text-primary-content bg-gradient-to-r -translate-y-12;
+    & > h2 {
+      @apply text-8xl p-5 ;
+    }
+  }
+  .call {
+      @apply btn btn-wide text-2xl btn-circle w-80 h-20;
+    }
+}
