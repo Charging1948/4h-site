@@ -6,6 +6,10 @@
     .news-card {
         @apply card lg:card-side bg-base-100 shadow-xl snap-start snap-always lg:snap-center m-12 lg:m-20;
 
+        .card-title {
+            @apply font-bold text-2xl;
+        }
+
         & > figure {
             // @apply mx-10 mt-10;
             & > img {

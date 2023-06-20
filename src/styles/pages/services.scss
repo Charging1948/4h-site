@@ -1,0 +1,16 @@
+#services {
+  h2 {
+    @apply text-2xl font-bold sm:text-3xl md:text-5xl text-center;
+  }
+  .service-hero {
+    @apply hero min-h-screen bg-base-200 p-5;
+
+    .hero-grid {
+      @apply grid grid-cols-1 md:grid-cols-2 gap-4 xl:gap-10 2xl:gap-4;
+
+      .service-card {
+        @apply card 2xl:card-side bg-base-100 shadow-xl;
+      }
+    }
+  }
+}
