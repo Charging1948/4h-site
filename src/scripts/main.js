@@ -16,7 +16,13 @@ function loadRoute(route) {
         .then(response => response.text())
         .then(html => { return html })
         .then(html => {
-            document.getElementById("main-content").innerHTML = html.match(/<body[^>]*>([\s\S]*)<\/body>/)[1];
+            const bodyMatch = html.match(/<body ?([^>]*?(id="([\s\S]*?)")?|[^>]*?)>([\s\S]*)<\/body>/)
+            const mainContent = document.querySelector('main.main-content')
+            mainContent.innerHTML = bodyMatch[4];
+            mainContent.id = bodyMatch[3];
+
+            import(`../styles/${bodyMatch[3]}.scss`)
+
 
             // update the page title
             document.title = html.match(/<title>(.*?)<\/title>/)[1];
