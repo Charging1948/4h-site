@@ -5,6 +5,10 @@
     @apply w-full text-center text-2xl font-bold mb-4;
   }
 
+  .fiximg {
+    @apply w-48 h-auto;
+  }
+
   .doctor-card {
     @apply card lg:card-side shadow-xl m-10 bg-primary text-primary-content;
 

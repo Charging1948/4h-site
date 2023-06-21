@@ -9,4 +9,5 @@ export async function setOpeningHours() {
     const openInfo = await getOpenInfo();
 
     ohBody.innerHTML += `${openInfo.weekSchedule.toString()}`;
+    document.getElementById("opening-hours-body").tabIndex = 0;
 }
